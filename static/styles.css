@@ -1,0 +1,133 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+}
+.header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Vertically center the logos */
+    gap: 20px;            /* Space between logos */
+    margin-bottom: 20px;
+}
+.header-logos img {
+    width: 120px;         /* Reduce the width for a smaller appearance */
+    height: auto;
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.header-logos img:hover {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+h1, h2 {
+    color:#842121; 
+}
+
+/* Centering video container */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Style for the video feed */
+video, img {
+    width: 80%; /* Adjust the width as needed */
+    height: auto;
+    border: 4px solid #842121;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.register-form {
+    margin-top: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 400px;
+}
+
+form input[type="submit"] {
+    background-color: #842121;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e65c00;
+}
+
+/* Flash message styling */
+.flash-messages {
+    margin-top: 20px;
+}
+
+.flash-messages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flash-messages ul li {
+    background-color: #ffefc1;
+    color: #665e00;
+    border-left: 4px solid #842121;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #842121;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}

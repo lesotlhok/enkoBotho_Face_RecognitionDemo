@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header Logos -->
+        <div class="header-logos">
+            <img src="{{ url_for('static', filename='logo_BU.png') }}" alt="Botho University Logo" class="logo">
+            <img src="{{ url_for('static', filename='logo_enko_boto.png') }}" alt="enko Botho School Logo" class="logo">
+        </div>
+        
+        <!-- Main Title -->
+        <h1>Welcome to the enko-Botho Face Recognition Portal</h1>
+
+        <!-- Live Video Feed Section -->
+        <div class="video-container">
+            <h2>Recognition Live Feed</h2>
+            <img src="{{ url_for('recognize_feed') }}" alt="Recognition Feed">
+        </div>
+
+        <!-- Register Face Form -->
+        <div class="register-form">
+            <h2>Register a Student</h2>
+            <form action="/register" method="POST" enctype="multipart/form-data">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="file">Upload Face Image:</label>
+                <input type="file" id="file" name="file" accept="image/*" required><br>
+                
+                <input type="submit" value="Register Face">
+            </form>
+        </div>
+
+        <!-- Display Flash Messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 lesotlhok | In Partnership with Botho University & enko Botho School</p> 
+
+
+    </footer>
+</body>
+</html>
